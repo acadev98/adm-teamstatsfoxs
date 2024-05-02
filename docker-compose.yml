@@ -1,0 +1,14 @@
+version: '3'
+services:
+  adm-teamstatsfoxs:
+    container_name: adm-teamstatsfoxs
+    image: adm-teamstatsfoxs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - /opt/logs:/opt/logs
+      - /opt/proyectos/admteamstatsfox/images:/images
+    ports:
+      - "8090:8090"
+    restart: always
